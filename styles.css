@@ -1,0 +1,339 @@
+/* media запрос создаем через команду request 
+указываем с одним или несколько требоывниями, которые записываем в круглых скобках 
+рядом пишем тип устройства, которых всего 5 
+1) all - (подходит ко всему, даже к часам)
+2)print  - тип для принтеров, в режиме предв-го просмотра ( например в Word Micr.);
+3)speech - для всех програм которые читают с экрана (для книг электроных например);
+4)screen - дял устро-в экранов ( всех видов дивайсов, показать красиво адаптивно); */
+
+/* media screen - будем менять фон  */
+/* напишем медиа для очень больших экранов ширина которых больше 1240 px */
+
+/* 
+div{
+    height: 200px;
+    background-color: black;
+}
+
+
+ @media screen and (min-width:1240px) {
+    div {
+      background-color: green;
+    }  
+ }
+
+
+
+ @media screen and (min-width:840px) and (max-width:1240px){
+    div{
+        background-color: blue;
+    }
+ } */
+
+ /* (breakpoint - где меняется код) */
+
+
+
+ /* @media  */
+/* all, print,speech  */
+/* @media screen */
+
+
+
+/* __________________________________
+
+div {
+    display: none;
+    height: 200px;
+    background-color: black;
+  }
+  
+  @media screen and (min-width: 1240px) {
+    div {
+      background-color: green;
+    }
+  } */
+  
+  /* @media screen and (min-width: 840px) and (max-width: 1240px) {
+    div {
+      display: block;
+      background-color: blue;
+    }
+  }
+  
+  @media screen and (min-width: 640px) and (max-width: 840px) {
+    div {
+      background-color: orange;
+    }
+  }
+  
+  @media screen and (max-width: 640px) {
+    div {
+      background-color: coral;
+      height: 500px;
+    }
+  } */
+  
+  /* breakpoint */
+
+
+
+
+  @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+
+  *{
+    margin: 0px;
+    box-sizing: border-box;
+    padding: 0;
+  }
+
+.container{
+    max-width: 1110px;
+    margin:0 auto;
+}
+
+
+header{
+    min-height: 740px;
+    background-image: url(/media/BG_header.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    gap:35px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.header-h1{
+
+max-width: 734px;
+color: var(--White, #FFF);
+text-align: center;
+font-family: Oswald;
+font-size: 64px;
+font-style: normal;
+font-weight: 500;
+letter-spacing: 1.28px;
+text-transform: uppercase;
+}
+
+.header-h4{
+    max-width: 734px;
+    color: #fff;
+    text-align: center;
+    font-family: Oswald;
+    font-size: 18px;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+/* header end */
+/* about start */
+
+#about {
+    position: relative;
+  }
+  
+  .experience {
+    position: absolute;
+    top: -150px;
+    left: 50%;
+    transform: translate(-50%);
+    min-height: 300px;
+    background: #f7f7f7;
+    padding: 57px 130px;
+  }
+  
+  .about-items {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+  }
+  
+  .about-item {
+    width: 190px;
+    text-align: center;
+ }
+
+ .about-h4 {
+    color: #f7654a;
+    font-family: Oswald;
+    font-size: 72px;
+    font-weight: 500;
+  }
+
+  .about-h5 {
+    font-family: Oswald;
+    font-size: 36px;
+    font-weight: 500;
+    text-transform: uppercase;
+  }
+
+  .about-p {
+    color: #999;
+    font-family: Oswald;
+    font-size: 18px;
+    font-weight: 500;
+  }
+
+
+  @media screen and (max-width: 1280px) {
+    .about-items {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .experience {
+      padding: 57px 100px;
+    }
+  }
+
+  @media screen and (max-width: 780px) {
+    .about-items {
+      grid-template-columns: 1fr;
+    }
+  }
+
+
+.header-2{
+  font-family: Oswald;
+  font-size: 36px;
+  font-weight: 500;
+  text-align: center;
+  padding-top: 200px;
+}
+
+
+.our-projects{
+    display:flex;
+    flex-wrap: wrap;
+    width: 1111px;
+    height: 708px;
+    top: 990px;
+    left: 404px;
+    gap:20px;
+    padding-top: 50px;
+}
+
+.our-project{
+  width: 350px;
+  height: 578px;
+  top: 1093px;
+  left: 1165px;
+}
+
+@media screen and (max-width: 1280px) {
+  .our-projects {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .our-project {
+    padding: 57px 100px;
+  }
+}
+
+@media screen and (max-width: 780px) {
+  .our-projects {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+.img{
+  width: 350px;
+  height: 380px;
+  top: 1093px;
+  left: 405px;
+}
+  
+  .about-h3{
+  font-family: Oswald;
+  font-size: 24px;
+  font-weight: 500;
+  text-align: left;
+  color: #404149;
+  }
+
+  .project-p{
+  font-family:'Open Sans';
+  font-size: 16px;
+  font-weight: 400;
+  text-align: left;
+  color: #999999;
+  }
+
+
+#request{
+  width: 1920px;
+  height: 181px;
+  margin-top: 1114px;
+  left: -1px;
+  background:#F7654A;
+}
+
+.clever-projects{
+  font-family: Oswald;
+  font-size: 48px;
+  font-weight: 700;
+  text-align: left;
+  color: #FFF;
+  padding-top: 30px;
+  margin-left: 150px;
+}
+
+
+.result{
+  font-family: Oswald;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 36px;
+  text-align: left;
+  color: #FFF;
+  margin-left: 150px;
+}
+
+.request_button{
+  width: 175px;
+  height: 49px;
+  float: right;
+  position: relative;
+  margin-top: -70px;
+  margin-right: 650px;
+}
+
+.service{
+  padding-top: 70px;
+  font-family: Oswald;
+  font-size: 36px;
+  font-weight: 500;
+  text-align: center;
+  margin-right: 500px;
+}
+
+.services-items{
+  padding-top: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  padding-top: 50px;
+  padding-bottom: 100px;
+  margin-right: 320px;
+  margin-left: 160px;
+}
+
+
+@media screen and (max-width: 1280px) {
+  .services-items {
+    grid-template-columns: repeat(6, 1fr);
+  }
+  .service{
+    padding: 57px 100px;
+  }
+}
+
+@media screen and (max-width: 780px) {
+  .services-items {
+    grid-template-columns: 1fr;
+  }
+}
